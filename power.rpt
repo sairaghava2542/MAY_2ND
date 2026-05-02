@@ -1,0 +1,58 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : fifo
+Version: T-2022.03-SP5
+Date   : Fri May  1 10:47:37 2026
+****************************************
+
+
+Library(s) Used:
+
+    saed32rvt_tt0p78vn40c (File: /home/bvrit/synopsys_example/workshop/ref/lib/stdcell_rvt/saed32rvt_tt0p78vn40c.db)
+
+
+Operating Conditions: tt0p78vn40c   Library: saed32rvt_tt0p78vn40c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+fifo                   8000              saed32rvt_tt0p78vn40c
+
+
+Global Operating Voltage = 0.78 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  = 274.5762 uW   (98%)
+  Net Switching Power  =   4.7215 uW    (2%)
+                         ---------
+Total Dynamic Power    = 279.2977 uW  (100%)
+
+Cell Leakage Power     =   4.1885 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network    266.2220            0.0000            0.0000          266.2220  (  93.91%)  i
+register           3.1491            0.6643        3.0283e+06            6.8417  (   2.41%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      5.2051            4.0572        1.1602e+06           10.4226  (   3.68%)
+--------------------------------------------------------------------------------------------------
+Total            274.5763 uW         4.7215 uW     4.1885e+06 pW       283.4863 uW
+1
