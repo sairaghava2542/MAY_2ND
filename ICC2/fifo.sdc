@@ -10,8 +10,8 @@ set_clock_uncertainty -setup 0.15 [get_clocks clk]
 set_clock_uncertainty -hold  0.1 [get_clocks clk]
 
 # 3. I/O Constraints (Assuming 25% of clock period)
-set_input_delay  -max 0.5 -clock clk #[remove_from_collection [all_inputs] clk]
-set_input_delay  -min 0.1 -clock clk #[remove_from_collection [all_inputs] clk]
+set_input_delay  -max 0.5 -clock clk 
+set_input_delay  -min 0.1 -clock clk 
 set_output_delay -max 0.5 -clock clk [all_outputs]
 set_output_delay -min 0.1 -clock clk [all_outputs]
 
